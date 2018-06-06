@@ -370,10 +370,9 @@
   //#define  DEFAULT_Kd 440
 
   //E3D V6 
-  #define  DEFAULT_Kp 27.24
-  #define  DEFAULT_Ki 2.13
-  #define  DEFAULT_Kd 87.01
-
+  #define  DEFAULT_Kp 27.04
+  #define  DEFAULT_Ki 2.20
+  #define  DEFAULT_Kd 83.07
 
 #endif // PIDTEMP
 
