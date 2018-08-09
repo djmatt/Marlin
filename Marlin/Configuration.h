@@ -369,10 +369,15 @@
   //#define  DEFAULT_Ki 2.25
   //#define  DEFAULT_Kd 440
 
-  //E3D V6 
-  #define  DEFAULT_Kp 27.04
-  #define  DEFAULT_Ki 2.20
-  #define  DEFAULT_Kd 83.07
+  //E3D V6 190-215
+  //#define  DEFAULT_Kp 27.04
+  //#define  DEFAULT_Ki 2.20
+  //#define  DEFAULT_Kd 83.07
+
+  //E3D V6 245
+  #define  DEFAULT_Kp 16.06
+  #define  DEFAULT_Ki 1.06
+  #define  DEFAULT_Kd 60.84
 
 #endif // PIDTEMP
 
@@ -388,7 +393,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -413,6 +418,11 @@
   //#define  DEFAULT_bedKp 97.1
   //#define  DEFAULT_bedKi 1.41
   //#define  DEFAULT_bedKd 1675.16
+
+  //12V 70C
+  #define  DEFAULT_bedKp 341.13
+  #define  DEFAULT_bedKi 61.24
+  #define  DEFAULT_bedKd 475.06
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -690,7 +700,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 22  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 9   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.4 // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.25 // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
