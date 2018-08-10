@@ -308,12 +308,8 @@
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
-<<<<<<< HEAD
 #define TEMP_SENSOR_BED 1
-=======
-#define TEMP_SENSOR_BED 0
 #define TEMP_SENSOR_CHAMBER 0
->>>>>>> upstream/1.1.x
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
 #define DUMMY_THERMISTOR_998_VALUE 25
@@ -377,15 +373,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-<<<<<<< HEAD
   //#define  DEFAULT_Kp 22.2
   //#define  DEFAULT_Ki 1.08
   //#define  DEFAULT_Kd 114
-=======
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
->>>>>>> upstream/1.1.x
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -412,18 +402,6 @@
 //===========================================================================
 //============================= PID > Bed Temperature Control ===============
 //===========================================================================
-<<<<<<< HEAD
-// Select PID or bang-bang with PIDTEMPBED. If bang-bang, BED_LIMIT_SWITCHING will enable hysteresis
-//
-// Uncomment this to enable PID on the bed. It uses the same frequency PWM as the extruder.
-// If your PID_dT is the default, and correct for your hardware/configuration, that means 7.689Hz,
-// which is fine for driving a square wave into a resistive load and does not significantly impact you FET heating.
-// This also works fine on a Fotek SSR-10DA Solid State Relay into a 250W heater.
-// If your configuration is significantly different than this and you don't understand the issues involved, you probably
-// shouldn't use bed PID until someone else verifies your hardware works.
-// If this is enabled, find your own PID constants below.
-#define PIDTEMPBED
-=======
 
 /**
  * PID Bed Heating
@@ -439,7 +417,6 @@
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
 //#define PIDTEMPBED
->>>>>>> upstream/1.1.x
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1051,21 +1028,12 @@
   #define GRID_MAX_POINTS_X 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-  // Set the boundaries for probing (where the probe can reach).
-<<<<<<< HEAD
-  #define LEFT_PROBE_BED_POSITION (50)
-  #define RIGHT_PROBE_BED_POSITION ((X_BED_SIZE) - LEFT_PROBE_BED_POSITION)
-  #define FRONT_PROBE_BED_POSITION (50)
-  #define BACK_PROBE_BED_POSITION ((X_BED_SIZE) - FRONT_PROBE_BED_POSITION)
-
   // The Z probe minimum outer margin (to validate G29 parameters).
-  #define MIN_PROBE_EDGE 10
-=======
-  //#define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  //#define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
-  //#define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
-  //#define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
->>>>>>> upstream/1.1.x
+  #define MIN_PROBE_EDGE 50
+  #define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
+  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
+  #define FRONT_PROBE_BED_POSITION MIN_PROBE_EDGE
+  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE)
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
@@ -1458,22 +1426,6 @@
 #define DISPLAY_CHARSET_HD44780 JAPANESE
 
 /**
-<<<<<<< HEAD
- * LCD TYPE
- *
- * Enable ULTRA_LCD for a 16x2, 16x4, 20x2, or 20x4 character-based LCD.
- * Enable DOGLCD for a 128x64 (ST7565R) Full Graphical Display.
- * (These options will be enabled automatically for most displays.)
- *
- * IMPORTANT: The U8glib library is required for Full Graphic Display!
- *            https://github.com/olikraus/U8glib_Arduino
- */
-#define ULTRA_LCD   // Character based
-//#define DOGLCD      // Full graphics display
-
-/**
-=======
->>>>>>> upstream/1.1.x
  * SD CARD
  *
  * SD Card support is disabled by default. If your controller has an SD slot,
@@ -1602,43 +1554,6 @@
 //#define PANEL_ONE
 
 //
-<<<<<<< HEAD
-// MaKr3d Makr-Panel with graphic controller and SD support.
-// http://reprap.org/wiki/MaKr3d_MaKrPanel
-//
-//#define MAKRPANEL
-
-//
-// ReprapWorld Graphical LCD
-// https://reprapworld.com/?products_details&products_id/1218
-//
-//#define REPRAPWORLD_GRAPHICAL_LCD
-
-//
-// Activate one of these if you have a Panucatt Devices
-// Viki 2.0 or mini Viki with Graphic LCD
-// http://panucatt.com
-//
-//#define VIKI2
-//#define miniVIKI
-
-//
-// Adafruit ST7565 Full Graphic Controller.
-// https://github.com/eboston/Adafruit-ST7565-Full-Graphic-Controller/
-//
-//#define ELB_FULL_GRAPHIC_CONTROLLER
-
-//
-// RepRapDiscount Smart Controller.
-// http://reprap.org/wiki/RepRapDiscount_Smart_Controller
-//
-// Note: Usually sold with a white PCB.
-//
-#define REPRAP_DISCOUNT_SMART_CONTROLLER
-
-//
-=======
->>>>>>> upstream/1.1.x
 // GADGETS3D G3D LCD/SD Controller
 // http://reprap.org/wiki/RAMPS_1.3/1.4_GADGETS3D_Shield_with_Panel
 //
@@ -1669,7 +1584,7 @@
 //
 // Generic 16x2, 16x4, 20x2, or 20x4 character-based LCD.
 //
-//#define ULTRA_LCD
+#define ULTRA_LCD
 
 //=============================================================================
 //======================== LCD / Controller Selection =========================
